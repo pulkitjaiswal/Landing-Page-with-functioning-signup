@@ -7,8 +7,14 @@ class HomeController < ApplicationController
   def index
   end
   
-  def settings
-    
+  def save_visitor
+    @visitor = Visitor.new(:email => params[:email])
+    if @visitor.valid? && @visitor.save
+      flash[:message] = "Success to save email"
+      redirect_to "/" 
+    else
+      index
+    end
   end
   
   def static_page
