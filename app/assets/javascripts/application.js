@@ -30,6 +30,13 @@ $(function() {
   .mouseout(function(){
     $(this).attr("src",'/images/footer_twitter.png');
   });
+  
+  $('#footer_pando').mouseover(function(){
+    $(this).attr("src",'/images/pandodaily_hover.png');
+  })
+  .mouseout(function(){
+    $(this).attr("src",'/images/pandodaily.png');
+  });
 
 });
 

@@ -10,31 +10,14 @@
     </p>
   </div>
   
-  <div>
-    <%= form_for(@visitor, :as => "visitor", :url => "/visitor", :method => :post) do |f| %>
-      
-      <%= f.email_field :email %>
-      <%= f.submit "Submit" %>
+  <div id="buttons">
+    <%= form_for(@visitor, :as => "visitor", :url => "/visitor", :class =>"signup_input", :method => :post) do |f| %>
+      <input id="visitor_email" name="visitor[email]" placeholder="email address" size="30" 
+        type="email" style="height: 22px; margin: 10px; padding: 8px 15px;">
+      <%= f.submit "Go", :class => "modern socle buy_now" %>
       <% unless @visitor.errors.empty? %>
-        <font style="color: red;"><%= @visitor.errors.full_messages.first %></font>
+        <br/><span style="color: red; margin-left: 10px; text-shadow: black 0.1em 0.1em 0.2em;"><%= @visitor.errors.full_messages.first %></span>
       <% end %>
     <% end %>
-  <div id="buttons">
-    <form class="signup_input" action="/home/visitor" method="post">
-      <input type="text" id="visitor_email" name="email" placeholder="email address" />
-      <input class="modern socle sell_now" type="submit" name="Submit" value="GO"/>
-    </form>
-
   </div>
-
-
-
 </div>
-
-  <div id="footer">
-    <ul>
-    <li><a href="http://facebook.com/swapidy" target="_blank"><img id="footer_fb" src="/images/footer_fb.png" style="height:45px"></a></li>
-    <li><a href="http://twitter.com/swapidy" target="_blank"><img id="footer_twitter" src="/images/footer_twitter.png" style="height:40px"></a></li>
-    <li><a href="#"><img id="footer_pando" src="/images/pandodaily.png"></a></li>
-    </ul>
-  </div>
