@@ -1,0 +1,437 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#iphone{
+	height:350px;
+	width:350px;
+}
+
+#imac{
+	height:350px;
+	width:550px;
+}
+
+a:visited 
+{text-decoration:none;}
+
+
+#main_catalog{
+	text-align:center;
+}
+
+.thumbnail{
+	text-align:center;
+}
+
+.icon{
+	padding-left:5px;
+}
+
+td{
+	font-weight:bold;
+}
+
+
+button{
+	width:300px;
+	margin-left:30px;
+}
+
+ul{
+  list-style-type:none;
+}
+
+#c_macbook{
+	width:300px;
+	padding-right:0px;
+
+}
+#c_ipod{
+	width:200px;
+}
+#c_iphone{
+	width:200px;
+}
+
+#search_container{
+	float:left;
+	width:400px;
+}
+#product_lineup{
+	float:left;
+  width:500px;
+}
+
+.hero-unit{
+  color: #FFFFFF;
+  line-height: 1.2;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-align:left;
+}
+.hero_title{
+  font-weight: bold;
+  text-rendering: optimizelegibility;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.hero_info{
+  font-weight:bold;
+  font-size: 30px;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.6), 0 -1px 1px rgba(0, 0, 0, 0.6);
+
+}
+
+/*Buy and sell buttons*/
+#buttons{
+margin-left:150px;
+
+  position:relative;
+  margin-top:100px;
+  width:650px;
+}
+
+#buttons a{
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 35px;
+    text-decoration: none;
+    font-family: "Lato", Calibri, Arial, sans-serif;
+}
+
+#buttons .modern{
+display: inline-block;
+    margin: 10px;
+    padding: 8px 15px;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    width: 200px;
+    height: 40px;
+
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+
+    box-shadow: 
+        inset 0 1px 0 rgba(255,255,255,0.5), 
+        0 2px 2px rgba(0,0,0,0.3), 
+        0 0 4px 1px rgba(0,0,0,0.2); 
+
+    text-decoration: none;
+    text-shadow: 0 1px rgba(255,255,255,0.7);  
+}
+
+#buttons .sell_now:hover {
+    background: #00CCFF;
+}
+#buttons .buy_now:hover{
+    background: #FC43CC;
+}
+#buttons .sell_now{
+     background: #0099FF;
+     margin-right:100px;
+
+}
+#buttons .buy_now{
+    background: #EE2C91;
+}
+
+
+/*Isotope*/
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* End: Recommended Isotope styles */
+
+
+
+/* disable CSS transitions for containers with infinite scrolling*/
+.isotope.infinite-scrolling {
+  -webkit-transition: none;
+     -moz-transition: none;
+      -ms-transition: none;
+       -o-transition: none;
+          transition: none;
+}
+
+#product_type{
+    position: relative;
+    margin: auto;
+}
+
+#product_type:before,
+#product_type:after {
+    content: "";
+    display: table;
+}
+#product_type:after {
+    clear: both;
+}
+
+.cat_item {
+  height: 200px;
+}
+
+#product_type_container {
+  margin: 0; 
+  text-align: left;
+  padding-top: 10px;
+}
+
+#product_type .category{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    cursor: pointer;
+    float: center;
+    text-align: center;
+    text-transform: none;
+    z-index: 10;
+}
+
+#product_type .category img {
+    padding: 0;
+    margin: 30px auto;
+    margin-bottom: 5px;
+}
+
+#product_type .category.blur{
+    box-shadow: 0px 0px 20px 10px rgba(255,255,255,1);
+    transform: scale(0.9);
+    opacity: 0.7;
+}
+
+#product_type .category.blur a,
+#product_type .category.blur img,
+#product_type .category.blur span,
+#product_type .category.blur p
+{
+    text-shadow: 0px 0px 10px rgba(51, 51, 51, 0.9);
+    color: rgba(51, 51, 51, 0);
+    opacity: 0.5;
+}
+
+#product_type .category.active{
+    transform: scale(1.05);
+    box-shadow: 
+        0px 0px 0px 10px rgba(255,255,255,1), 
+        1px 11px 15px 10px rgba(0,0,0,0.4);
+    z-index: 100;   
+    opacity: 1;
+}
+
+#product_type .category.select{
+    z-index: 100;
+    opacity: 1;
+}
+
+#product_type .category.active a,
+#product_type .category.active img,
+#product_type .category.active span,
+#product_type .category.active p,
+#product_type .category.select a,
+#product_type .category.select img,
+#product_type .category.select span,
+#product_type .category.select p {
+    opacity: 1;
+}
+
+#products .item{
+  width:100px;
+  height: 150px;
+  padding:30px;
+  border: 0px;
+}
+
+.hidden_filter {
+  display: none !important;
+}
+
+.thumbnail .box {
+  display: block;
+  margin: -25px;
+}
+
+.thumbnail .box .product_title {
+  
+}
+.thumbnail .box .product_image img {
+  height: 150px;
+}
+.thumbnail .box .product_price {
+  float: left; 
+  padding-left: 10px;
+  padding-top: 5px;
+}
+.thumbnail .box .button_for_buy,
+.thumbnail .box .button_for_sell {
+  float: right; 
+  padding-right:10px;
+  padding-top: 3px;
+}
+
+label {
+  display: inline;
+}
+
+.regular-checkbox {
+  display: none;
+}
+
+.regular-checkbox + label {
+  background-color: #fafafa;
+  border: 1px solid #cacece;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+  padding: 9px;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+}
+
+.regular-checkbox + label:active, .regular-checkbox:checked + label:active {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.regular-checkbox:checked + label {
+  background-color: #e9ecee;
+  border: 1px solid #adb8c0;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+  color: #99a1a7;
+}
+
+.regular-checkbox:checked + label:after {
+  content: '\2714';
+  font-size: 14px;
+  position: absolute;
+  top: 0px;
+  left: 3px;
+  color: #99a1a7;
+}
+
+
+.big-checkbox + label {
+  padding: 18px;
+  line-height: 30px;
+  margin-bottom: -11px;
+}
+
+.big-checkbox:checked + label:after {
+  font-size: 28px;
+  left: 6px;
+}
+
+#product_models {
+  display: block;
+  position: relative;
+  text-align: right;
+  padding-bottom: 20px;
+}
+
+.models_for_buy li.active a {
+  background-color: #FC43CC !important;
+} 
+
+.models_for_sell li.active a {
+  background-color: #08C !important;
+}
+
+#slider-code {
+  height: 270px; 
+  overflow: hidden;
+}
+#slider-code .viewport {
+  float: left; 
+  width: 725px; 
+  height: 270px; 
+  overflow: hidden; 
+  position: relative;
+}
+#slider-code .disable {
+  visibility: hidden;
+}
+#slider-code .overview {
+  list-style: none; 
+  position: absolute; 
+  padding: 0; 
+  margin: 0; 
+  left: 0; 
+  top: 0;
+}
+#slider-code .overview li {
+  float: left; 
+  padding: 1px; 
+  height: 270px; 
+  width: 236px;
+}
+#slider-code .buttons {
+  display: block; 
+  margin: 0px 25px 0 0; 
+  float: left;
+  width: 39px;
+  height: 37px;
+  overflow: hidden;
+  position: relative;
+  color: #FFFFFF;
+}
+

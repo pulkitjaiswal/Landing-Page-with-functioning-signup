@@ -1,0 +1,54 @@
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="/"><img src="/images/swapidy_logo.png" style="height:50px"></a>
+      <ul class="nav pull-right">
+        <% if user_signed_in? %>
+          <li>
+            <div class="profile_info_nav">
+              <div style="display: inline-block;"><%= current_user.full_name %></div>
+              <div style="display: inline-block;">(HONEY <%= format_num(current_user.honey_balance) %>)</div>
+            </div>
+          </li>
+          <% if current_user.is_admin? %>
+            <li>
+              <%= link_to('ADMIN', rails_admin_path, :method => :get) %>
+            </li>
+          <% end %>
+          <li>
+            <%= link_to('LOGOUT', destroy_user_session_path, :method => :delete) %>
+          </li>
+        <% else %>
+          <li id="nav_login">
+            <a href="javascript:showPopup('popup-dialog_for_signin');" >LOGIN</a>
+          </li>
+           <li class="divider-vertical"></li>
+          <li id="nav_signup">
+            <a href="javascript:showPopup('popup-dialog_for_signup');" >SIGN UP</a>
+          </li>
+          <li class="divider-vertical"></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<% if user_signed_in? %>
+  <div>
+    <strong>Signed in as <%= current_user.first_name %></strong>
+  </div>
+<% else %>
+  <div id="popup-box-bg" style="display: none;"></div>
+  <div id="popup-dialog_for_signup" style="display:none;" class="popup-box-wrapper standard-popup">
+    <div id="dialog-content">
+      <%= render :partial => "/devise/shared/signup_form", :locals => {:resource => User.new, :resource_name => "user", :show_cancel_link => true} %>
+    </div>
+  </div>
+  
+  <div id="popup-dialog_for_signin" style="display:none;" class="popup-box-wrapper standard-popup">
+    <div id="dialog-content"
+      <%= render :partial => "/devise/shared/signin_form", :locals => {:resource => User.new, :resource_name => "user", :show_cancel_link => true} %>
+    </div>
+  </div>
+<% end %>
+
