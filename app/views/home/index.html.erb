@@ -11,10 +11,14 @@
   </div>
   
   <div>
-    <form action="/home/visitor" method="post">
-      <input type="text" id="visitor_email" name="email" />
-      <input type="submit" name="Submit" value="Submit" />
-    </form>
+    <%= form_for(@visitor, :as => "visitor", :url => "/visitor", :method => :post) do |f| %>
+      
+      <%= f.email_field :email %>
+      <%= f.submit "Submit" %>
+      <% unless @visitor.errors.empty? %>
+        <font style="color: red;"><%= @visitor.errors.full_messages.first %></font>
+      <% end %>
+    <% end %>
   </div>
 </div>
 

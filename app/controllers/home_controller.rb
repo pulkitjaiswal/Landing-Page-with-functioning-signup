@@ -1,19 +1,21 @@
 class HomeController < ApplicationController
 
-  layout 'application_with_slider', :only => [:index]
+  layout 'application_with_slider', :only => [:index, :save_visitor]
 
   before_filter :require_login, :only => [:settings]
   
   def index
+    @visitor = Visitor.new
   end
   
   def save_visitor
-    @visitor = Visitor.new(:email => params[:email])
-    if @visitor.valid? && @visitor.save
+    @visitor = Visitor.new(params[:visitor])
+    if @visitor.save
       flash[:message] = "Success to save email"
+      UserNotifier.visitor_greeting(@visitor).deliver
       redirect_to "/" 
     else
-      index
+      render "/home/index"
     end
   end
   

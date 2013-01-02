@@ -1,6 +1,7 @@
 class Visitor < ActiveRecord::Base
   attr_accessible :email
-  
-  validate :email, :present => true
+
+  validates :email, :presence => true, :uniqueness => true
+  validates :email, :format => { :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create }#, :message => "Invalid email address"
   
 end
