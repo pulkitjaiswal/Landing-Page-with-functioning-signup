@@ -85,16 +85,14 @@ ul{
 
 /*Buy and sell buttons*/
 #buttons{
-margin-left:150px;
-
-  position:relative;
+  display:inline;
   margin-top:100px;
-  width:650px;
+
 }
 
 #buttons a{
     text-align: center;
-    color: #fff;
+    color:white;
     font-weight: 700;
     font-size: 35px;
     text-decoration: none;
@@ -109,6 +107,8 @@ display: inline-block;
     border-radius: 4px;
     width: 200px;
     height: 40px;
+    font-size:30px;
+    font-color:white;
 
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
@@ -434,4 +434,18 @@ label {
   position: relative;
   color: #FFFFFF;
 }
-
+.signup_input{
+  margin-left: 330px;
+  margin-top:100px;
+}
+#footer{
+  position:absolute;
+  bottom:100px;
+}
+#footer li{
+  display:inline;
+}
+#footer_pando{
+  height:100px;
+  width:200px;
+}

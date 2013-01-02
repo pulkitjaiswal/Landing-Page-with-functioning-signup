@@ -10,6 +10,7 @@
     </p>
   </div>
   
+<<<<<<< HEAD
   <div>
     <%= form_for(@visitor, :as => "visitor", :url => "/visitor", :method => :post) do |f| %>
       
@@ -19,7 +20,23 @@
         <font style="color: red;"><%= @visitor.errors.full_messages.first %></font>
       <% end %>
     <% end %>
+=======
+  <div id="buttons">
+    <form class="signup_input" action="/home/visitor" method="post">
+      <input type="text" id="visitor_email" name="email" placeholder="email address" />
+      <input class="modern socle sell_now" type="submit" name="Submit" value="GO"/>
+    </form>
+>>>>>>> design changes to made
   </div>
+
+
+
 </div>
 
-
+  <div id="footer">
+    <ul>
+    <li><a href="http://facebook.com/swapidy" target="_blank"><img id="footer_fb" src="/images/footer_fb.png" style="height:45px"></a></li>
+    <li><a href="http://twitter.com/swapidy" target="_blank"><img id="footer_twitter" src="/images/footer_twitter.png" style="height:40px"></a></li>
+    <li><a href="#"><img id="footer_pando" src="/images/pandodaily.png"></a></li>
+    </ul>
+  </div>
