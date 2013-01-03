@@ -4,7 +4,10 @@
 
 $ ->
 
+$('#abcontainer').fadeIn(1000);
+
 $('.hero-unit button.btn-large').click (event) ->
   console.log("Sell/Buy button click triggered")
   $('div#product_type').show()
   $.scrollTo($('div#product_type'), 1000)
+
