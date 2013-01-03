@@ -1,20 +1,19 @@
 <div class="hero-unit">
   <div style="hero-unit-content">
-    <h1 class="hero_title">A revolution is coming.</h1>
+    <h1 class="hero_title">Our honey bees are hard at work. 
+</h1>
     <br/>
-    <p class="hero_info">
-      We buy your products for honey. You buy anything using honey.
+    <p class="hero_info">We're creating a platform that saves you a lot of time.
     </p>
-    <p class="hero_info">
-      It's never been so easy to buy and sell.
-    </p>
+
+   <p id="enter_info" class="hero_info ">Enter your email below and be the first in line when we go live.
+   </p>
   </div>
-  
   <div id="buttons">
     <%= form_for(@visitor, :as => "visitor", :url => "/visitor", :class =>"signup_input", :method => :post) do |f| %>
-      <input id="visitor_email" name="visitor[email]" placeholder="email address" size="30" 
+      <input id="visitor_email" name="visitor[email]" placeholder="Email address" size="30" 
         type="email" style="height: 22px; margin: 10px; padding: 8px 15px;">
-      <%= f.submit "Go", :class => "modern socle buy_now" %>
+      <%= f.submit "Submit Email", :class => "modern socle buy_now" %>
       <% unless @visitor.errors.empty? %>
         <br/><span style="color: red; margin-left: 10px; text-shadow: black 0.1em 0.1em 0.2em;"><%= @visitor.errors.full_messages.first %></span>
       <% end %>

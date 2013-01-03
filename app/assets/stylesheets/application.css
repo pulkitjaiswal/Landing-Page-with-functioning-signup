@@ -345,4 +345,37 @@ color:white;
   box-shadow: 0 0 5px black;
   z-index: 99999;
 }
+.headings_pink{
+  color: #fa3e6e;
+}
+.sub_content{
+  color:#666666;
+  font-size:16px;
+}
 
+.about_img{
+  height:60px;
+  width:60px;
+  margin-top:50px;
+}
+.about_img_desc{
+  font-size:20px;
+  position:relative;
+  font-weight:bold;
+  margin-left:50px;
+  top:30px;
+
+}
+.team_subheading{
+color: #00aeef;
+  font-weight: bold;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
+.team_content{
+ 
+  color: #333;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-shadow: none;
+    font-size: 14px;
+}
