@@ -11,7 +11,7 @@ class HomeController < ApplicationController
   def save_visitor
     @visitor = Visitor.new(params[:visitor])
     if @visitor.save
-      flash[:message] = "Success to save email"
+      flash[:thanks_visitor] = "Thank you!"
       UserNotifier.visitor_greeting(@visitor).deliver
       redirect_to "/" 
     else

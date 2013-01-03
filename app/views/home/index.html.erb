@@ -14,8 +14,10 @@
       <input id="visitor_email" name="visitor[email]" placeholder="Email address" size="30" 
         type="email" style="height: 30px; margin: 10px; padding: 8px 15px;">
       <%= f.submit "Submit Email", :class => "modern socle buy_now" %>
-      <% unless @visitor.errors.empty? %>
+      <% if !@visitor.errors.empty? %>
         <br/><span style="color: red; margin-left: 10px; text-shadow: black 0.1em 0.1em 0.2em;"><%= @visitor.errors.full_messages.first %></span>
+      <% elsif flash[:thanks_visitor] && !flash[:thanks_visitor].blank? %>
+        <br/><span style="color: white; font-weight: bold; margin-left: 325px; text-shadow: black 0.1em 0.1em 0.2em;"><%= flash[:thanks_visitor] %></span>
       <% end %>
     <% end %>
   </div>
