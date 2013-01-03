@@ -15,6 +15,7 @@ devise_for :users, :controllers => {:sessions => "sessions",
   match "/faq_buying" => "home#static_page", :method => :get, :content => "faq_buying"
   match "/faq_selling" => "home#static_page", :method => :get, :content => "faq_selling"
   match "/team" => "home#static_page", :method => :get, :content => "team"
+  match "/jobs" => "home#static_page", :method => :get, :content => "jobs"
   match "/visitor" => "home#save_visitor", :method => :post
   
   

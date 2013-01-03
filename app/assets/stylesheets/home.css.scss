@@ -86,8 +86,9 @@ ul{
 /*Buy and sell buttons*/
 #buttons{
   display:inline;
-  margin-top:100px;
-
+  position:relative;
+  top:80px;
+  left:200px;
 }
 
 #buttons a{
