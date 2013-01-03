@@ -82,13 +82,16 @@ ul{
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.6), 0 -1px 1px rgba(0, 0, 0, 0.6);
 
 }
-
+.hero-info .enter{
+  position:relative;
+  top:200px;
+}
 /*Buy and sell buttons*/
 #buttons{
   display:inline;
   position:relative;
-  top:80px;
   left:200px;
+
 }
 
 #buttons a{
@@ -106,7 +109,7 @@ display: inline-block;
     padding: 8px 15px;
     border: 1px solid rgba(0,0,0,0.15);
     border-radius: 4px;
-    width: 200px;
+    width: 210px;
     height: 40px;
     font-size:30px;
     font-color:white;
@@ -141,6 +144,10 @@ display: inline-block;
     background: #EE2C91;
 }
 
+.buy_now{
+  color:white;
+  font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 
 /*Isotope*/
 .isotope-item {
@@ -449,4 +456,7 @@ label {
 #footer_pando{
   height:100px;
   width:200px;
+}
+#enter_info{
+  margin-top:100px;
 }
