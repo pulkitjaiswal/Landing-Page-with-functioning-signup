@@ -13,7 +13,7 @@ class UserNotifier < ActionMailer::Base
   
   def visitor_greeting(visitor)
     @visitor = visitor
-    mail :to => @visitor.email, :subject => "Welcome to visit Swapidy"
+    mail :to => @visitor.email, :subject => "The future is coming"
   end
   
 end
